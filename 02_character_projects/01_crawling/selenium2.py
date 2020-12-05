@@ -13,14 +13,15 @@ option = webdriver.ChromeOptions()
 option.binary_location = binary_location
 
 driver = webdriver.Chrome(executable_path = driver_location,chrome_options=option)
-driver.get("http://www.python.org")
+driver.get("http://www.google.co.kr")
 
 
-
-assert "Python" in driver.title
 elem = driver.find_element_by_name("q")
-elem.clear()
-elem.send_keys("pycon")
-elem.send_keys(Keys.RETURN)
-assert "No results found." not in driver.page_source
-driver.close()
+
+#assert "Python" in driver.title
+elem = driver.find_element_by_name("q")
+#elem.clear()
+#elem.send_keys("pycon")
+#elem.send_keys(Keys.RETURN)
+#assert "No results found." not in driver.page_source
+#driver.close()
